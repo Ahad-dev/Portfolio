@@ -11,22 +11,22 @@ export const About_Me = [
     },
     {
       "title": "Work Experience",
-      "detail": "Software Engineer at Tech Solutions Inc. from January 2022 to Present. Worked on developing and maintaining web applications using React and Node.js.",
+      "detail": "I am working on fiverr from last 1.5 years. Worked on developing and maintaining web applications using React and Node.js.",
       "icon": "IoBriefcaseSharp"
     },
     {
       "title": "Skills",
-      "detail": "Languages: JavaScript, Python, C++. Frameworks: React, Node.js, Express. Tools: Git, Docker, Jenkins.",
+      "detail": "Languages: JavaScript, C++. Frameworks: React, Node.js, Express, Next. Tools: Git,Github.",
       "icon": "IoCodeSlashSharp"
     },
     {
       "title": "Projects",
-      "detail": "1. E-commerce Platform: Developed a full-stack e-commerce platform with features like user authentication, product management, and order processing. 2. Portfolio Website: Created a personal portfolio website to showcase my projects and experience.",
+      "detail": "1. E-commerce Platform \n 2. Portfolio Website \n 3.Real Time Chat application \n 4.Manual Database.",
       "icon": "IoRocketSharp"
     },
     {
       "title": "Certifications",
-      "detail": "Certified Full Stack Developer (2021), AWS Certified Solutions Architect (2022)",
+      "detail": "Certified Responsive Web Developer (2023), FreeCodeCamp.Inc (2024)",
       "icon": "IoRibbonSharp"
     }
   ];
