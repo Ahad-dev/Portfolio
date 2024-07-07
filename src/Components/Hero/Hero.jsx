@@ -6,7 +6,7 @@ const Hero = () => {
       <div className='w-60 h-60 bg-black rounded-full overflow-hidden'>
         <img src={My} className="object-cover" alt="Profile" />
       </div>
-        <h1 className='text-7xl font-semibold'><span className='bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text '>I'm Ahad, </span>the Full Stack Devloper from Pakistan</h1>
+        <h1 className='text-7xl font-semibold'><span className='bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text '>I'm Ahad, </span>the Full Stack Developer from Pakistan</h1>
         <p>Hey! I'm Ahad, a Full Stack Developer from Pakistan. I create professional websites and web applications for businesses and individuals. I love to work with modern technologies and frameworks to build high-quality products.</p>
         <div className='flex gap-6 justify-center items-center max-md:flex-col'>
 
