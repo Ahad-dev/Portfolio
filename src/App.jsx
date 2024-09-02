@@ -6,6 +6,7 @@ import Services from './Components/My_Services/Services'
 import Skills from './Components/Skills/Skills'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
+import { Toaster } from 'react-hot-toast'
 const App = () => {
   return (
     <div className='space-y-32'>
@@ -16,6 +17,10 @@ const App = () => {
       <Skills></Skills>
       <Contact></Contact>
       <Footer></Footer>
+      <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+      />
     </div>
   )
 }

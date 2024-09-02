@@ -3,9 +3,13 @@ import theme_pattern from "../../assets/theme_pattern.svg";
 import { IoMail } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
+import {motion,useInView} from "framer-motion";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
   const [result, setResult] = useState("");
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -24,13 +28,19 @@ const Contact = () => {
     if (data.success) {
       setResult("Form Submitted Successfully");
       event.target.reset();
+      toast.success("Email Send Successfully");
     } else {
       console.log("Error", data);
       setResult(data.message);
     }
   };
   return (
-    <div
+    <motion.div
+
+    ref={ref} 
+    initial={{ opacity: 0, y: 150 }}
+    animate={isInView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.5, delay: 0.3 }}
       id="contact"
       className="text-white flex justify-center flex-col gap-16 items-center  "
     >
@@ -98,7 +108,7 @@ const Contact = () => {
           </form>
         </section>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
