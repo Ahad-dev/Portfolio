@@ -3,6 +3,7 @@ import logo from "../../assets/logo.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import nav_underline from "../../assets/nav_underline.svg";
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { id: "#home", label: "Home" },
@@ -14,19 +15,23 @@ const navItems = [
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
-
+  const {pathname} = useLocation();
+  
   return (
     <motion.nav
     initial={{ y: -100 }}
     animate={{ y: 0 }}
     transition={{ duration: 0.5 }}
     className="text-white sticky top-0 bg-[#252525] z-50 flex py-6 justify-around items-center   ">
-      <motion.img
-        initial={{ x: -100,opacity:0 }}
-        animate={{ x: 0 ,opacity:1}}
-        transition={{ duration: 0.5, delay: 0.5 }}
-      src={logo} alt="LOGO" />
-      <ul className="flex items-center gap-10 max-md:hidden">
+      <Link to ="/">
+        <motion.img
+          initial={{ x: -100,opacity:0 }}
+          animate={{ x: 0 ,opacity:1}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          src={logo} alt="LOGO" />
+
+      </Link>
+      {pathname =="/" ?<ul className="flex items-center gap-10 max-md:hidden">
         {navItems.map((item,index) => (
           <motion.li 
           whileHover={{ scale: 1.2 }}
@@ -42,8 +47,22 @@ const Navbar = () => {
             {active === item.id && <img src={nav_underline} alt="" />}
           </motion.li>
         ))}
-      </ul>
+      </ul>:""}
+      <div className="flex items-center gap-10 max-md:hidden">
+
       <motion.div
+      initial={{ x: 100,opacity:0 }}
+      animate={{ x: 0 ,opacity:1}}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="">
+        <Link
+          to="/projects"
+          className="border border-gray-500 rounded-xl hover:border-transparent hover:bg-gray-600 py-2 px-5  hover:scale-105 transition-all duration-300 "
+        >
+          My Projects
+        </Link>
+      </motion.div>
+     {pathname == '/' && <motion.div
       initial={{ x: 100,opacity:0 }}
       animate={{ x: 0 ,opacity:1}}
       transition={{ duration: 0.5, delay: 0.5 }}
@@ -54,7 +73,9 @@ const Navbar = () => {
         >
           Connect With Me
         </AnchorLink>
-      </motion.div>
+      </motion.div>}
+      </div>
+
     </motion.nav>
   );
 };

@@ -31,7 +31,7 @@ const Services = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: 0.3 }}
       id="services"
-      className="text-white flex justify-center flex-col gap-16 items-center"
+      className="text-white flex justify-center flex-col gap-16 items-center pt-36"
     >
       <div className="relative mb-10 text-white">
         <h1 className="text-7xl font-semibold z-10 relative max-sm:text-6xl">

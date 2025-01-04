@@ -1,27 +1,19 @@
 import React from 'react'
 import Navbar from './Components/Navbar/Navbar'
-import Hero from "./Components/Hero/Hero"
-import AboutMe from './Components/About_Me/AboutMe'
-import Services from './Components/My_Services/Services'
-import Skills from './Components/Skills/Skills'
-import Contact from './Components/Contact/Contact'
-import Footer from './Components/Footer/Footer'
-import { Toaster } from 'react-hot-toast'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+
 const App = () => {
   return (
-    <div className='space-y-32'>
+    <>
       <Navbar></Navbar>
-      <Hero></Hero>
-      <AboutMe></AboutMe>
-      <Services></Services>
-      <Skills></Skills>
-      <Contact></Contact>
-      <Footer></Footer>
-      <Toaster
-        position="bottom-right"
-        reverseOrder={false}
-      />
-    </div>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path="/projects" element={<Projects/>}/>
+      </Routes>
+    </>
+
   )
 }
 

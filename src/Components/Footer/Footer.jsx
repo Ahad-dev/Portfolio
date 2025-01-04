@@ -4,7 +4,7 @@ import { Social_Links } from "../../assets/SocialLinks";
 
 const Footer = () => {
   return (
-    <div className="text-white w-5/6 flex flex-col  m-auto gap-5 justify-around items-center">
+    <div className="text-white w-5/6 flex flex-col  m-auto gap-5 justify-around items-center  pt-36">
       <div className="flex justify-between w-full">
         <img src={logo} alt="LOGO" />
         <div className="space-x-5 max-md:hidden">

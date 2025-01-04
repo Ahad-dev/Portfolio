@@ -42,7 +42,7 @@ const Contact = () => {
     animate={isInView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.5, delay: 0.3 }}
       id="contact"
-      className="text-white flex justify-center flex-col gap-16 items-center  "
+      className="text-white flex justify-center flex-col gap-16 items-center pt-36"
     >
       <div className="relative mb-10">
         <h1 className="text-7xl font-semibold z-10 relative max-sm:text-5xl">Get in Touch</h1>

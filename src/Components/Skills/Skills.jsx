@@ -31,7 +31,7 @@ const Skills = () => {
     ref={ref}
     initial={{ opacity: 0, y: 100 }}
     animate={isInView ? { opacity: 1, y: 0 } : {}}
-    transition={{ duration: 0.5, delay: 0.3 }} id="skills" className="text-white flex justify-center flex-col gap-16 items-center">
+    transition={{ duration: 0.5, delay: 0.3 }} id="skills" className="text-white flex justify-center flex-col gap-16 items-center pt-36">
       <div className="relative mb-10">
         <h1 className="text-7xl font-semibold z-10 relative">My Skills</h1>
         <img
@@ -43,7 +43,7 @@ const Skills = () => {
       <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={isInView1 ? "visible" : "hidden"} className="flex flex-wrap gap-5 justify-center items-center w-11/12">
+          animate={isInView ? "visible" : "hidden"} className="flex flex-wrap gap-5 justify-center items-center w-11/12">
 
       {Skills_set.map((skill, index) => {
         const IconComponent = skill.icon;

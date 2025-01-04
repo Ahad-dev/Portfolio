@@ -25,7 +25,7 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       id="home"
-      className="text-white flex flex-col justify-center items-center w-3/5 m-auto text-center gap-10"
+      className="text-white flex flex-col justify-center items-center w-3/5 m-auto text-center gap-10 pt-28"
     >
       <motion.div variants={itemVariants} className="w-60 h-60 bg-black rounded-full overflow-hidden">
         <img src={My} className="object-cover" alt="Profile" />
